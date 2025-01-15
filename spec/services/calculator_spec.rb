@@ -31,5 +31,11 @@ RSpec.describe Calculator do
         expect(Calculator.add("1\n2,3")).to eq(6)
       end
     end
+
+    context 'when a custom delimiter is provided' do
+      it 'returns the sum using the custom delimiter' do
+        expect(Calculator.add("//;\n1;2")).to eq(3)
+      end
+    end
   end
 end
