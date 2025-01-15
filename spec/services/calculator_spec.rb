@@ -13,5 +13,11 @@ RSpec.describe Calculator do
         expect(Calculator.add('1')).to eq(1)
       end
     end
+
+    context 'when the input contains two numbers separated by a comma' do
+      it 'returns their sum' do
+        expect(Calculator.add('1,2')).to eq(3)
+      end
+    end
   end
 end
